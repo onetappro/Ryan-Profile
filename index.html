@@ -1,68 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>One Tap Pro – Intro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Tap Pro</title>
 
-<style>
-    body {
-        margin: 0;
-        background: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        overflow: hidden;
-    }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-    .logo-container {
-        animation: fadeInOut 4s ease forwards;
-    }
+        .logo-container {
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
 
-    .logo {
-        width: 180px;
-        opacity: 0;
-        animation: logoReveal 3s ease forwards;
-    }
+        .logo {
+            width: 180px;
+            opacity: 0;
+            animation: glow 2.5s ease-in-out forwards;
+        }
 
-    /* Gold glow effect */
-    .logo-glow {
-        filter: drop-shadow(0 0 25px gold);
-        animation: glowPulse 3s ease-in-out infinite alternate;
-    }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
 
-    @keyframes logoReveal {
-        0% { opacity: 0; transform: scale(0.7); }
-        60% { opacity: 1; transform: scale(1.05); }
-        100% { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes glowPulse {
-        0% { filter: drop-shadow(0 0 8px gold); }
-        100% { filter: drop-shadow(0 0 25px gold); }
-    }
-
-    @keyframes fadeInOut {
-        0% { opacity: 0; }
-        10% { opacity: 1; }
-        80% { opacity: 1; }
-        100% { opacity: 0; }
-    }
-</style>
-
+        @keyframes glow {
+            0% { opacity: 0; filter: drop-shadow(0 0 0px gold); }
+            100% { opacity: 1; filter: drop-shadow(0 0 25px gold); }
+        }
+    </style>
 </head>
+
 <body>
 
 <div class="logo-container">
-    <img src="logo.png" class="logo logo-glow">
+    <img src="logo.png" class="logo">
 </div>
 
 <script>
-    // Redirect after animation ends (4 seconds)
-    setTimeout(function() {
-        window.location.href = "home.html"; // <— change this to your homepage
-    }, 4000);
+    // Redirect after 3 seconds
+    setTimeout(function () {
+        window.location.href = "home.html";
+    }, 3000);
 </script>
 
 </body>
