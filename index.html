@@ -41,12 +41,14 @@
             position: relative;
             overflow: hidden;
             text-align: center;
+            box-sizing: border-box;
         }
 
         .btn i {
             font-size: 150px;
             display: block;
             margin: 0 auto;
+            transition: font-size 0.3s ease;
         }
 
         @media only screen and (max-width: 768px) {
@@ -58,6 +60,20 @@
 
             .btn i {
                 font-size: 180px;
+                transform: scale(1.2); /* Scales the icon to make it larger */
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .btn {
+                width: 100%;
+                padding: 35px;
+                font-size: 24px;
+            }
+
+            .btn i {
+                font-size: 220px; /* Even larger icon on smaller devices */
+                transform: scale(1.5); /* Scale the icon even more */
             }
         }
     </style>
