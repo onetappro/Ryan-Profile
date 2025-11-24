@@ -28,18 +28,45 @@
             border-radius: 8px;
             width: 80%;
             font-size: 18px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .btn i {
+            font-size: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .btn {
+                width: 95%;
+                padding: 30px;
+                font-size: 22px;
+            }
+
+            .btn i {
+                font-size: 180px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Ryan Richard</h1>
-        <p>Connect with me:</p>
 
-        <a class="btn" href="https://facebook.com/allidoismanalo" target="_blank">Facebook</a>
-        <a class="btn" href="https://instagram.com/__ryanrichard" target="_blank">Instagram</a>
-        <a class="btn" href="ryan-contact.vcf" target="_blank">Save Contact</a>
+<div class="card">
+    <a class="btn" href="https://facebook.com/allidoismanalo" target="_blank">
+        Facebook
+    </a>
+    <a class="btn" href="https://instagram.com/__ryanrichard" target="_blank">
+        Instagram
+    </a>
+    <a class="btn" href="ryan-contact.vcf" target="_blank">
+        <i class="fas fa-address-book"></i> Save Contact
+    </a>
+</div>
 
-    </div>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 </body>
 </html>
